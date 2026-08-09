@@ -1,3 +1,11 @@
-<app-header></app-header>
+<app-header (menuToggle)="onMenuToggle()"></app-header>
 
-<app-sidebar></app-sidebar>
+<div class="app-body">
+<div class="sidebar-container" [class.closed]="!sidebarOpen">
+    <app-sidebar></app-sidebar>
+</div>
+
+<main class="main-content">
+    <router-outlet></router-outlet>
+</main>
+</div>

@@ -5,10 +5,15 @@ import { Sidebar } from './layout/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Sidebar], 
+  imports: [RouterOutlet, Header, Sidebar], 
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('sparkle_books-frontend');
+
+  sidebarOpen = true;
+  onMenuToggle() {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
 }

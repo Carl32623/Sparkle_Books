@@ -11,3 +11,29 @@ h1 {
 P {
     font-size: 20px;
 }
+
+.app-body {
+    display: flex;
+    min-height: calc(100vh - 140px);
+}
+
+.main-content {
+    flex: 1;
+    padding: 24px;
+}
+
+.sidebar-container {
+    width: 260px;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    transform: translateX(0);
+    transition: 
+        transform 0.8s ease,
+        margin-left 0.8s ease;
+}
+
+.sidebar-container.closed {
+    transform: translateX(-100%);
+    margin-left: -260px;
+}

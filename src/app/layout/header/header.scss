@@ -7,6 +7,12 @@
     color: white;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .logo h1 {
     margin: 0;
 }
@@ -17,4 +23,25 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+}
+
+.menu-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    transition: background-color 0.2s ease;
+}
+
+.menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
