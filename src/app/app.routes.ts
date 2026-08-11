@@ -3,7 +3,7 @@ import { Dashboard } from './pages/dashboard/dashboard';
 import { Customers } from './pages/customers/customers';
 import { CleaningServices } from './pages/cleaning-services/cleaning-services';
 import { Jobs } from './pages/jobs/jobs';
-import { Calender } from './pages/calender/calender';
+import { Calendar } from './pages/calendar/calendar';
 import { Invoices } from './pages/invoices/invoices';
 import { Payments } from './pages/payments/payments';
 import { Reports } from './pages/reports/reports';
@@ -39,8 +39,8 @@ export const routes: Routes = [
     },
     // Route that directs sidebar link to Calender component
     {
-        path: 'calender',
-        component: Calender
+        path: 'calendar',
+        component: Calendar
     },
     // Route that directs sidebar link to Invoices component
     {

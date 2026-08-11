@@ -12,7 +12,7 @@ import { Sidebar } from './layout/sidebar/sidebar';
 export class App {
   protected readonly title = signal('sparkle_books-frontend');
 
-  sidebarOpen = true;
+  sidebarOpen = false;
   onMenuToggle() {
     this.sidebarOpen = !this.sidebarOpen;
   }

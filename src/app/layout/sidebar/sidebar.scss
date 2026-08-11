@@ -38,3 +38,19 @@
 .sidebar-nav a:hover {
     background-color: #ececec;
 }
+
+.sidebar-nan ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 6px;
+}
+
+.sidebar-nav a.active {
+    background-color: #FFBB7C;
+    color: #0f0600;
+    font-weight: 600;
+}
