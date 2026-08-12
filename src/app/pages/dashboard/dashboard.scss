@@ -1,0 +1,42 @@
+.dashboard-page {
+    padding: 24px;
+}
+
+.dashboard-header {
+    margin-bottom: 32px;
+
+    h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.summary-card {
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-top: 8px solid #ff6700;
+    border-radius: 12px;
+
+    h3 {
+        margin: 0 0 16px;
+        font-size: 16px;
+    }
+}
+
+.summary-number {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
