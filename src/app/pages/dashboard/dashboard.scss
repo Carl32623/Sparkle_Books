@@ -1,7 +1,9 @@
+
+// Dashboard Page Styles
 .dashboard-page {
     padding: 24px;
 }
-
+// Dashboard Header Styles
 .dashboard-header {
     margin-bottom: 32px;
 
@@ -15,13 +17,19 @@
         font-size: 16px;
     }
 }
-
+// Summary Cards Styles
 .summary-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
-
+// Responsive Styles for Smaller Screens
+@media (max-width: 900px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+}
+// Individual Summary Card Styles
 .summary-card {
     padding: 24px;
     background-color: #ffffff;
@@ -34,9 +42,93 @@
         font-size: 16px;
     }
 }
-
+// Summary Number Styles
 .summary-number {
     margin: 0;
     font-size: 32px;
     font-weight: 700;
+}
+// Upcoming Jobs Section Styles
+.upcoming-jobs {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+}
+// Section Header Styles
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+        margin: 0;
+    }
+
+    a {
+        color: #ff6700;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+// Job Row Styles
+.job-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+// Remove border from the last job row
+.job-row:last-child {
+    border-bottom: none;
+}
+// Job Time Styles
+.job-time {
+    min-width: 80px;
+    font-weight: 700;
+}
+// Job Details Styles
+.job-details {
+    h3 {
+        margin: 0 0 4px;
+        font-size: 16px;
+    }
+
+    p {
+        margin: 0;
+        color: #666666;
+    }
+}
+// Quick Actions Section Styles
+.quick-actions {
+    margin-top: 32px;
+    margin-bottom:32px;
+
+    h2 {
+        margin: 0 0 16px;
+    }
+}
+// Action Buttons Styles
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+// Individual Action Button Styles
+.action-button {
+    padding: 12px 20px;
+    background-color: #ff6700;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+
+    // Hover effect for action buttons
+    &:hover {
+        background-color: #e65c00;
+    }
 }

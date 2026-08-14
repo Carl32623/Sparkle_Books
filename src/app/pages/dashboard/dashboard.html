@@ -1,12 +1,13 @@
 <div class="dashboard-page">
 
+    <!-- Dashboard Header Section -->
     <section class="dashboard-header">
         <h1>Dashboard</h1>
         <p>Welcome back! Here's an overview of your business.</p>
     </section>
 
+    <!-- Summary Cards Section -->
     <section class="summary-cards">
-
         <div class="summary-card">
             <h3>Today's Jobs</h3>
             <p class="summary-number">3</p>
@@ -21,6 +22,59 @@
             <h3>Monthly Revenue</h3>
             <p class="summary-number">$2,450</p>
         </div>
-
     </section>
+
+    <!-- Quick Actions Section -->
+    <section class="quick-actions">
+        <h2>Quick Actions</h2>
+
+        <div class="action-buttons">
+            <a routerLink="/customers" class="action-button">
+                + Add Customer
+            </a>
+
+            <a routerLink="/jobs" class="action-button">
+                + Schedule Job
+            </a>
+
+            <a routerLink="/invoices" class="action-button">
+                + Create Invoice
+            </a>
+        </div>
+    </section>
+
+    <!-- Upcoming Jobs Section -->
+    <section class="upcoming jobs">
+        <div class="section-header">
+            <h2>Upcoming Jobs </h2>
+            <a routerLink="/jobs">View All Jobs</a>
+        </div>
+
+        <div class="job-list">
+            <div class="job-row">
+                <div class="job-time">9:00 AM</div>
+                <div class="job-details">
+                    <h3>Smith Residence</h3>
+                    <p>Standard Cleaning</p>
+                </div>
+            </div>
+
+            <div class="job-row">
+                <div class="job-time">1:00 PM</div>
+                <div class="job-details">
+                    <h3>Johnson Residence</h3>
+                    <p>Deep Cleaning</p>
+                </div>
+            </div>
+
+            <div class="job-row">
+                <div class="job-time">4:00 PM</div>
+                <div class="job-details">
+                    <h3>Williams Residence</h3>
+                    <p>Move-Out Cleaning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
