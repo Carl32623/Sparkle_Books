@@ -1,0 +1,111 @@
+<div class="add-customer-page">
+
+  <section class="page-header">
+    <h1>Add Customer</h1>
+    <p>Enter the customer's information below.</p>
+  </section>
+
+  <form
+    class="customer-form"
+    [formGroup]="customerForm"
+  >
+
+    <div class="form-grid">
+
+      <div class="form-field">
+        <label for="firstName">First Name</label>
+
+        <input
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          placeholder="First name"
+        >
+
+        @if (
+          customerForm.controls.firstName.touched &&
+          customerForm.controls.firstName.hasError('required')
+        ) {
+          <p class="validation-error">
+            First name is required.
+          </p>
+        }
+      </div>
+
+
+      <div class="form-field">
+        <label for="lastName">Last Name</label>
+
+        <input
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          placeholder="Last name"
+        >
+
+        @if (
+          customerForm.controls.lastName.touched &&
+          customerForm.controls.lastName.hasError('required')
+        ) {
+          <p class="validation-error">
+            Last name is required.
+          </p>
+        }
+      </div>
+
+
+      <div class="form-field">
+        <label for="phone">Phone</label>
+
+        <input
+          id="phone"
+          type="tel"
+          formControlName="phone"
+          placeholder="555-123-4567"
+        >
+
+        @if (
+          customerForm.controls.phone.touched &&
+          customerForm.controls.phone.hasError('required')
+        ) {
+          <p class="validation-error">
+            Phone number is required.
+          </p>
+        }
+      </div>
+
+
+      <div class="form-field">
+        <label for="email">Email</label>
+
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="customer@email.com"
+        >
+
+        @if (
+          customerForm.controls.email.touched &&
+          customerForm.controls.email.hasError('required')
+        ) {
+          <p class="validation-error">
+            Email is required.
+          </p>
+        }
+
+        @if (
+          customerForm.controls.email.touched &&
+          customerForm.controls.email.hasError('email')
+        ) {
+          <p class="validation-error">
+            Enter a valid email address.
+          </p>
+        }
+      </div>
+
+    </div>
+
+  </form>
+
+</div>

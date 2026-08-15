@@ -1,0 +1,187 @@
+.customers-page {
+    padding: 24px;
+}
+
+.customers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+.add-customer-button {
+    padding: 12px 20px;
+    background-color: #ff7518;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: #e65c00;
+    }
+}
+
+.customer-content {
+    width: 100%;
+}
+
+.customer-toolbar {
+    margin-bottom: 24px;
+}
+
+.customer-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+        border-color: #ff7518;
+    }
+}
+
+.customer-table {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.customer-table-header,
+.customer-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr 0.5fr 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+}
+
+.customer-table-header {
+    background-color: #f5f5f5;
+    font-weight: 700;
+}
+
+.customer-row {
+    border-top: 1px solid #eeeeee;
+}
+
+.table-action {
+    padding: 8px 14px;
+    background-color: transparent;
+    color: #ff7518;
+    border: 1px solid #ff7518;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+    &:hover {
+        background-color: #ff7518;
+        color: #ffffff;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .customers-page {
+        padding: 16px;
+    }
+
+    .customers-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        p {
+            width: 100%;
+            max-width: 100%;
+            white-space: normal;
+            overflow-wrap: break-word;
+        }
+    }
+
+    .add-customer-button {
+        width: 100%;
+    }
+
+    .customer-toolbar {
+        margin-bottom: 24px;
+    }
+
+    .customer-search {
+        width: 100%;
+        max-width: none;
+    }
+
+    .customer-table {
+        overflow: hidden;
+    }
+
+    .customer-table-header {
+        display: none;
+    }
+
+    .customer-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .customer-row span {
+        display: block;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .customer-row span:nth-child(1) {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .customer-row span:nth-child(2)::before {
+        content: "Phone: ";
+        font-weight: 700;
+    }
+
+    .customer-row span:nth-child(3)::before {
+        content: "Email: ";
+        font-weight: 700;
+    }
+
+    .customer-row span:nth-child(4)::before {
+        content: "Jobs: ";
+        font-weight: 700;
+    }
+
+    .customer-row span:nth-child(5) {
+        margin-top: 8px;
+    }
+
+    .table-action {
+        width: 100%;
+    }
+}

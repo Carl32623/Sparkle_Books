@@ -9,6 +9,7 @@ import { Payments } from './pages/payments/payments';
 import { Reports } from './pages/reports/reports';
 import { Taxes } from './pages/taxes/taxes';
 import { Settings } from './pages/settings/settings';
+import { AddCustomer } from './pages/customers/add-customer/add-customer';
 
 export const routes: Routes = [
     // Route that directs opening page to dashboard
@@ -26,6 +27,11 @@ export const routes: Routes = [
     {
         path: 'customers',
         component: Customers
+    },
+    // Route that directs Add Customer button to add customer page
+    {
+        path: 'customers/add',
+        component: AddCustomer
     },
     // Route that directs sidebar link to cleaning services component
     {
