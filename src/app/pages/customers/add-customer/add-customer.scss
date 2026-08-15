@@ -58,12 +58,48 @@
     font-size: 14px;
 }
 
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ff7518;
+}
+
+select option:checked {
+    background-color: #ff7518;
+    color: white;
+}
+
+select option:hover {
+    background-color: #ff7518;
+    color: white;
+}
+
+.address-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
 @media (max-width: 700px) {
     .add-customer-page {
         padding: 16px;
     }
 
     .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .address-row {
         grid-template-columns: 1fr;
     }
 }
