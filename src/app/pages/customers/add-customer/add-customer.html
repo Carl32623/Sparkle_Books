@@ -1,17 +1,17 @@
 <div class="add-customer-page">
-
+  <!-- Add Customer Page -->
   <section class="page-header">
     <h1>Add Customer</h1>
     <p>Enter the customer's information below.</p>
   </section>
-
+  <!-- Add Customer Form -->
   <form
     class="customer-form"
     [formGroup]="customerForm"
   >
-
+    <!-- Form Grid -->
     <div class="form-grid">
-
+      <!-- First Name Field -->
       <div class="form-field">
         <label for="firstName">First Name</label>
 
@@ -33,7 +33,7 @@
         }
       </div>
 
-
+      <!-- Last Name Field -->
       <div class="form-field">
         <label for="lastName">Last Name</label>
 
@@ -55,7 +55,7 @@
         }
       </div>
 
-
+      <!-- Phone Field -->
       <div class="form-field">
         <label for="phone">Phone</label>
 
@@ -86,7 +86,7 @@
         }
       </div>
 
-
+      <!-- Email Field -->
       <div class="form-field">
         <label for="email">Email</label>
 
@@ -116,7 +116,7 @@
           </p>
         }
       </div>
-
+      <!-- Address Field -->
       <div class="form-field">
         <label for="address">Address</label>
 
@@ -135,7 +135,7 @@
             </p>
           }
       </div>
-
+      <!-- Address Row: City, State, Zip Code -->
       <div class="address-row">
         <div class="form-field">
           <label for="city">City</label>
@@ -153,7 +153,7 @@
               </p>
             }
         </div>
-
+        <!-- State Field -->
         <div class="form-field">
           <label for="state">State</label>
           <select
@@ -174,7 +174,7 @@
                 </p>
               }
         </div>
-
+        <!-- Zip Code Field -->
         <div class="form-field">
           <label for="zipCode">Zip Code</label>
           <input

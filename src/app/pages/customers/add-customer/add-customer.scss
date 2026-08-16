@@ -1,8 +1,9 @@
+// Styles for Add Customer Page
 .add-customer-page {
     padding: 24px;
     max-width: 900px;
 }
-
+// Page Header Styles
 .page-header {
     margin-bottom: 32px;
 
@@ -15,20 +16,20 @@
         font-size: 16px;
     }
 }
-
+// Add Customer Button Styles
 .customer-form {
     padding: 24px;
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
 }
-
+// Form Grid Styles
 .form-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
 }
-
+// Form Field Styles
 .form-field {
     display: flex;
     flex-direction: column;
@@ -51,13 +52,13 @@
         }
     }
 }
-
+// Validation Error Styles
 .validation-error {
     margin: 6px 0 0;
     color: #c62828;
     font-size: 14px;
 }
-
+// Select Field Styles
 select {
     width: 100%;
     padding: 16px 20px;
@@ -67,22 +68,22 @@ select {
     background-color: white;
     box-sizing: border-box;
 }
-
+// Select Field Focus and Option Styles
 select:focus {
     outline: none;
     border-color: #ff7518;
 }
-
+// Select Option Styles
 select option:checked {
     background-color: #ff7518;
     color: white;
 }
-
+// Select Option Hover Styles
 select option:hover {
     background-color: #ff7518;
     color: white;
 }
-
+// Address Row Styles
 .address-row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;

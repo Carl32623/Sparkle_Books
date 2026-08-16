@@ -1,7 +1,7 @@
 .customers-page {
     padding: 24px;
 }
-
+/* Customers Page Styles */
 .customers-header {
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@
         font-size: 16px;
     }
 }
-
+// Add Customer Button Styles
 .add-customer-button {
     padding: 12px 20px;
     background-color: #ff7518;
@@ -33,15 +33,15 @@
         background-color: #e65c00;
     }
 }
-
+// Customer Content Styles
 .customer-content {
     width: 100%;
 }
-
+// Customer Toolbar Styles
 .customer-toolbar {
     margin-bottom: 24px;
 }
-
+// Customer Search Input Styles
 .customer-search {
     width: 100%;
     max-width: 400px;
@@ -56,14 +56,14 @@
         border-color: #ff7518;
     }
 }
-
+// Customer Table Styles
 .customer-table {
     border: 1px solid #e5e5e5;
     border-radius: 12px;
     overflow: hidden;
     background-color: #ffffff;
 }
-
+// Customer Table Header and Row Styles
 .customer-table-header,
 .customer-row {
     display: grid;
@@ -72,16 +72,16 @@
     gap: 16px;
     padding: 16px 20px;
 }
-
+// Customer Table Header Styles
 .customer-table-header {
     background-color: #f5f5f5;
     font-weight: 700;
 }
-
+// Customer Row Styles
 .customer-row {
     border-top: 1px solid #eeeeee;
 }
-
+// Table Action Button Styles
 .table-action {
     padding: 8px 14px;
     background-color: transparent;

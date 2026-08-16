@@ -9,6 +9,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './add-customer.scss',
 })
 export class AddCustomer {
+  // List of U.S. states for the state dropdown
   states = [
   'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE',
   'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS',
@@ -19,44 +20,52 @@ export class AddCustomer {
   'WI', 'WY'
 ];
 
+  // Define the form group and its controls with validation rules
   customerForm = new FormGroup({
   firstName: new FormControl('', [
     Validators.required,
     Validators.maxLength(35)
   ]),
 
+  // Validation for last name: required and max length of 35 characters
   lastName: new FormControl('', [
     Validators.required,
     Validators.maxLength(35)
   ]),
 
+  // Validation for phone number: required, max length of 14 characters, and must match the pattern (XXX) XXX-XXXX
   phone: new FormControl('', [
     Validators.required,
     Validators.maxLength(14),
     Validators.pattern(/^\(\d{3}\) \d{3}-\d{4}$/)
   ]),
 
+  // Validation for email: required, must be a valid email format, and max length of 50 characters
   email: new FormControl('', [
     Validators.required,
     Validators.email,
     Validators.maxLength(50)
   ]),
 
+  // Validation for address: required and max length of 75 characters
   address: new FormControl('', [
     Validators.required,
     Validators.maxLength(75)
   ]),
 
+  // Validation for city: required and max length of 50 characters
   city: new FormControl('', [
     Validators.required,
     Validators.maxLength(50)
   ]),
 
+  // Validation for state: required and max length of 50 characters
   state: new FormControl('', [
     Validators.required,
     Validators.maxLength(50)
   ]),
 
+  // Validation for ZIP code: required, max length of 5 characters, and must match the pattern of exactly 5 digits
   zipCode: new FormControl('', [
     Validators.required,
     Validators.maxLength(5),
@@ -64,6 +73,7 @@ export class AddCustomer {
   ])
 });
 
+// Method to format phone number input
 formatPhoneNumber(event: Event): void {
     const input = event.target as HTMLInputElement;
 
@@ -90,6 +100,7 @@ formatPhoneNumber(event: Event): void {
     });
   }
 
+  // Method to format ZIP code input
   formatZipCode(event: Event): void {
   const input = event.target as HTMLInputElement;
 
