@@ -5,8 +5,10 @@
             <h1>Customers</h1>
             <p>Manage your customer information and cleaning history.</p>
         </div>
-
-        <button class="add-customer-button">
+        <!-- Add Customer Button -->
+        <button class="add-customer-button" 
+                (click)="onAddCustomer()" 
+                routerLink="/customers/add-customer">
             + Add Customer
         </button>
     </section>

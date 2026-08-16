@@ -8,6 +8,7 @@
   <form
     class="customer-form"
     [formGroup]="customerForm"
+    (ngSubmit)="onSubmit()"
   >
     <!-- Form Grid -->
     <div class="form-grid">
@@ -194,6 +195,24 @@
         </div>
       </div>
 
+    </div>
+    <!-- Form Actions: Cancel and Save Buttons -->
+    <div class="form-actions">
+      <button
+        type="button"
+        class="btn-cancel"
+        routerLink="/customers"
+      >
+        Cancel
+      </button>
+
+      <button
+        type="submit"
+        class="btn-save"
+        [disabled]="customerForm.invalid"
+      >
+        Save Customer
+      </button>
     </div>
 
   </form>

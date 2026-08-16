@@ -1,10 +1,11 @@
 import { NumberSymbol } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-customer',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './add-customer.html',
   styleUrl: './add-customer.scss',
 })
@@ -118,8 +119,17 @@ formatPhoneNumber(event: Event): void {
     emitEvent: false
   });
 }
+
+onSubmit(): void {
+  if (this.customerForm.invalid) {
+    return; // If the form is invalid, do not proceed
+  }
+
+  console.log('Customer form submitted:');
+  console.log(this.customerForm.value);
 }
 
+}
 
 
 
