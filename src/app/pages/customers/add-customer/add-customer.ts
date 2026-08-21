@@ -1,7 +1,8 @@
 import { NumberSymbol } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
+import { Customer } from '../../../models/customer';
 
 @Component({
   selector: 'app-add-customer',
@@ -10,6 +11,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './add-customer.scss',
 })
 export class AddCustomer {
+  // Inject the Router service to navigate after form submission
+  constructor(private router: Router) {} 
+
   // List of U.S. states for the state dropdown
   states = [
   'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE',
@@ -120,13 +124,28 @@ formatPhoneNumber(event: Event): void {
   });
 }
 
+// Method to handle form submission
 onSubmit(): void {
   if (this.customerForm.invalid) {
     return; // If the form is invalid, do not proceed
   }
 
-  console.log('Customer form submitted:');
-  console.log(this.customerForm.value);
+  // Create a new customer object using the form values
+  const customer: Customer = {
+    id: crypto.randomUUID(), // Generate a unique ID for the customer
+    firstName: this.customerForm.controls.firstName.value ?? '',
+    lastName: this.customerForm.controls.lastName.value ?? '',
+    phone: this.customerForm.controls.phone.value ?? '', 
+    email: this.customerForm.controls.email.value ?? '',
+    address: this.customerForm.controls.address.value ?? '',
+    city: this.customerForm.controls.city.value ?? '',
+    state: this.customerForm.controls.state.value ?? '',
+    zipCode: this.customerForm.controls.zipCode.value ?? ''
+  };
+
+  // Log the new customer object to the console for debugging purposes
+  console.log('New customer: ', customer);
+  this.router.navigate(['/customers']); // Navigate to the customers page after submission
 }
 
 }

@@ -10,6 +10,7 @@ import { Reports } from './pages/reports/reports';
 import { Taxes } from './pages/taxes/taxes';
 import { Settings } from './pages/settings/settings';
 import { AddCustomer } from './pages/customers/add-customer/add-customer';
+import { CustomerDetails } from './pages/customers/customer-details/customer-details';
 
 export const routes: Routes = [
     // Route that directs opening page to dashboard
@@ -32,6 +33,11 @@ export const routes: Routes = [
     {
         path: 'customers/add',
         component: AddCustomer
+    },
+    // Route that directs to customer details page
+    {
+        path: 'customers/:id',
+        component: CustomerDetails
     },
     // Route that directs sidebar link to cleaning services component
     {
@@ -73,4 +79,5 @@ export const routes: Routes = [
         path: 'settings',
         component: Settings
     }
+    
 ];
